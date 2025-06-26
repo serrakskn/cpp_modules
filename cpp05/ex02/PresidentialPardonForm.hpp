@@ -1,0 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sekeskin <sekeskin@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/04 19:41:55 by sekeskin          #+#    #+#             */
+/*   Updated: 2025/02/05 13:05:37 by sekeskin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef PRESIDENTIALPARDONFORM_HPP
+#define PRESIDENTIALPARDONFORM_HPP
+
+#include "AForm.hpp"
+
+class PresidentialPardonForm : public AForm {
+	private:
+		std::string _target;
+	public:
+		PresidentialPardonForm();
+		PresidentialPardonForm(std::string target);
+		PresidentialPardonForm(const PresidentialPardonForm& copy);
+		~PresidentialPardonForm();
+		PresidentialPardonForm &operator=(const PresidentialPardonForm& copy);
+		void executeAction(void) const;
+
+};
+
+#endif
